@@ -17,6 +17,7 @@ public class ShortenIODbContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+        // Since we're using InMemoryDb this configuration does not work.
         modelBuilder
             .ApplyConfiguration(
                 new ShortenedUrlConfiguration()
